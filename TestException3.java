@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class TestExpection {
+public class TestException3 {
     public static void main(String[] args) {
         try {
             StringReverse stringReverse = new StringReverse();
