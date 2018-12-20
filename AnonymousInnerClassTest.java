@@ -22,6 +22,13 @@ class FilterProvider {
         return new UpperFilter();
     }
 
+
+    public Filter provide3() {
+        return  (String string)->{
+            return "Lamda";
+        };
+    }
+
 }
 
 public class AnonymousInnerClassTest {
@@ -30,5 +37,6 @@ public class AnonymousInnerClassTest {
         Filter filter1 = fp.provide1();
         System.out.println(filter1.filter("AvadaFwad"));
         System.out.println(fp.provide2().filter("AvadaFwad"));
+        System.out.println(fp.provide3().filter("abasadw"));
     }
 }
