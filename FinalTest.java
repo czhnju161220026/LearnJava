@@ -1,24 +1,32 @@
-import java.util.*;
 
-class FinalData {
-    static private Random rand = new Random(33);
-    private final String name;
-    final int id = rand.nextInt();
-
-    public FinalData(String name) {
-        this.name = name;
+final class AFinalClass {
+    final int finalField = 0;
+    int x;
+    public AFinalClass() {
+        x = 0;
+    }
+    public AFinalClass(int x) {
+        this.x = x;
+        //Error: can't change the value of a final field
+        //finalField =1;
+    }
+    final void f() {
+        System.out.println("A final method");
     }
 
-    public String toString() {
-        return "ID: "+id+"\nName: "+name;
-    }
 }
 
+//Error: can't extend a final class
+//class subClass extends aFinalClass { }
+
 public class FinalTest {
-    public static void main(String[] args){
-        FinalData f1=new FinalData("lilaoba");
-        FinalData f2=new FinalData("sunxiaochuan");
-        System.out.println(f1);
-        System.out.println(f2);
+    void f(final AFinalClass finalClass) {
+        //Error: can't assign value to final reference
+        //finalClass = new AFinalClass(5);
+    }
+
+    public static void main(String[] args) {
+        AFinalClass finalClass = new AFinalClass(5);
+        finalClass.f();
     }
 }
