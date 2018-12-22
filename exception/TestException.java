@@ -1,4 +1,4 @@
-import java.util.*;
+package exception;
 
 class MyException extends Exception {
     private int category;

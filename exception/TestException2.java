@@ -1,3 +1,5 @@
+package exception;
+
 import java.util.*;
 
 public class TestException2 {
