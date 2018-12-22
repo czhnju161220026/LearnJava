@@ -1,32 +1,15 @@
 import java.util.ArrayList;
 
-public class TestException3 {
-    public static void main(String[] args) {
-        try {
-            StringReverse stringReverse = new StringReverse();
-            System.out.println(stringReverse.reverse("Good news"));
-            System.out.println(stringReverse.reverse("this is a bad news"));
-
-        }
-        catch (JudegExpection e) {
-            e.printStackTrace();
-        }
-
-        finally {
-            System.err.println("Expection triggered");
-            System.exit(-1);
-        }
-    }
-}
-
 class JudegExpection extends Exception {
     @Override
     public String getMessage() {
         return "JudgeExpection triggered "+super.getMessage();
     }
-
     public JudegExpection(String msg) {
         super(msg);
+    }
+    public JudegExpection() {
+        super("JudgeException");
     }
 }
 
@@ -39,4 +22,23 @@ class StringReverse {
         return res;
     }
 }
+
+public class TestException3 {
+    public static void main(String[] args) {
+        try {
+            StringReverse stringReverse = new StringReverse();
+            System.out.println(stringReverse.reverse("Good news"));
+            System.out.println(stringReverse.reverse("this is a bad news"));
+
+        }
+        catch (JudegExpection e) {
+            e.printStackTrace();
+            System.err.println("Expection triggered");
+            System.exit(-1);
+        }
+
+    }
+}
+
+
 

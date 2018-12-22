@@ -2,7 +2,7 @@ import java.util.*;
 
 public class TestException2 {
     public  static  void main(String[] args) {
-        Stack<Integer> stack = new Stack<Integer>();
+        Stack<Integer> stack = new Stack<>();
         for(int i = 0;i < 10;i++) {
             stack.push(i);
         }
@@ -14,13 +14,9 @@ public class TestException2 {
         }
         catch (EmptyStackException e) {
             e.printStackTrace();
-        }
-        finally {
             System.err.println("Stack Exception Triggered");
             System.exit(-1);
         }
-
-        System.out.println("I'm running");
     }
 }
 
