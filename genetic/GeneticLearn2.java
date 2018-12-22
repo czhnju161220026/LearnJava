@@ -1,15 +1,17 @@
+package genetic;
+
 abstract class Coffee {
     abstract public String toString();
 }
 class Lattee extends Coffee {
     public String toString() {
-        return "Lattee";
+        return "genetic.Lattee";
     }
 }
 
 class Mocha extends  Coffee {
     public String toString() {
-        return "Mocha";
+        return "genetic.Mocha";
     }
 }
 
@@ -26,7 +28,7 @@ public class GeneticLearn2 {
     public static  void main(String []args) {
         Cup<Mocha> cup =new Cup<>(new Mocha());
         Cup<Lattee> cup2 = new Cup<>(new Lattee());
-       //Cup<Integer>cup3 = new Cup<>(1); compile error
+       //genetic.Cup<Integer>cup3 = new genetic.Cup<>(1); compile error
         System.out.println(cup);
         System.out.println(cup2);
 

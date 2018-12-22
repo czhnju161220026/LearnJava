@@ -1,3 +1,5 @@
+package genetic;
+
 class TriTuple<A,B,C> {
     public final A a;
     public final B b;
