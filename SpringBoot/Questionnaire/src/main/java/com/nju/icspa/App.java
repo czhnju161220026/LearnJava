@@ -3,6 +3,8 @@ import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
 /*
 * Hello SpringBoot
 * */
@@ -21,8 +23,11 @@ class MyController {
     }
 
     @GetMapping("/submit_question")
-    public String submit() {
+    public String submit(HttpServletRequest request) {
         //TODO: 提取问卷信息
+        String id = request.getParameter("id");
+        String sex = request.getParameter("sex");
+        System.out.println(id+" "+sex);
         return "submitQuestion";
     }
 }
