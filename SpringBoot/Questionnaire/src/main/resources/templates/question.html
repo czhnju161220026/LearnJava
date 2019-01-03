@@ -1,0 +1,297 @@
+<html>
+    <head>
+        <title>
+            PA阶段性调查（二）
+        </title>
+        <style type="text/css">
+            <!--
+            body{
+                margin: auto;
+                width: 80%;
+            }
+            -->
+        .font{
+            font-size: 24px;
+            color:#00b;
+            font-family:'Courier New', Courier, monospace;
+        }
+        .text{
+            font-size: 20px;
+            color:black;
+            font-family:'Courier New', Courier, monospace;
+        }
+        </style>
+    <style>
+        .button {
+        display: inline-block;
+        zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+        *display: inline;
+        vertical-align: baseline;
+        margin: 0 2px;
+        outline: none;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        font: 18px/100% Arial, Helvetica, sans-serif;
+        padding: .5em 2em .55em;
+        text-shadow: 0 1px 1px rgba(0,0,0,.3);
+        -webkit-border-radius: .5em; 
+        -moz-border-radius: .5em;
+        border-radius: .5em;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+        -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+        box-shadow: 0 1px 2px rgba(0,0,0,.2);
+        }
+         .button2{
+        display: inline-block;
+        zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+        *display: inline;
+        vertical-align: baseline;
+        margin: 0 2px;
+        outline: none;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        font: 14px/100% Arial, Helvetica, sans-serif;
+        padding: .5em 2em .55em;
+        text-shadow: 0 1px 1px rgba(0,0,0,.3);
+        -webkit-border-radius: .5em; 
+        -moz-border-radius: .5em;
+        border-radius: .5em;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+        -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+        box-shadow: 0 1px 2px rgba(0,0,0,.2);
+         }
+        </style>
+        <style>
+        .login-item{
+        margin-top:15px;
+        margin-left:20px;
+        }
+        .hide{
+            display: none;
+        }
+        .c1{
+            position: fixed;
+            top:0;
+            bottom: 0;
+            left:0;
+            right: 0;
+            background: rgba(0,0,0,.5);
+            
+            z-index: 2;
+        }
+    
+        .c2{
+            background-color:#ddd;
+            position: fixed;
+            width: 400px;
+            height:180px;
+            font: 18px/100% Arial, Helvetica, sans-serif;
+            top:50%;
+            left: 50%;
+            z-index: 3;
+            border-radius: .5em;
+            margin-top: -150px;
+            margin-left: -200px;
+            
+        }
+        #modal p{
+            margin-left: 80px;
+        }
+        .login-item {
+        width:270px;
+        height:50px;
+        display:block;
+        font-size:14px;
+        color: #bbb;
+        color:#fff;
+        line-height:50px;
+        text-align:center;
+        display:block;
+        text-decoration:none;
+    }
+    .font{
+                font-size: 24px;
+                color:#00b;
+                font-family:'Courier New', Courier, monospace;
+    }
+        </style>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    </head>
+
+    <body>
+         <img border="0" src="header.png" width="700"/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;
+    <hr>
+    <table>
+            <tr>
+                <td>
+                    <H2>
+                        Course Name : ICS PA<br/>
+                        Lecturer:<a href="http://cs.nju.edu.cn/wangliang/">Wang Liang</a><br/>
+                        Time: Autumn 2018 <br/>
+                        Credits: 5 <br/>
+                    </H2>
+                </td>
+
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </td>
+
+            </tr>
+    </table>
+
+
+    <hr>
+    <H2>
+        Questionnaire
+    </H2>
+    <ul>
+        <br/>
+        <form method="get" action ='submit_question'>
+        <font size = "5">
+            学号：<input type="text" name="id" value="" placeholder="请输入学号"><br/>
+            <!-- 单选框 radio name值必须相同-->
+            <br/>
+            性别：<input type="radio" name="sex" value="1" checked="checked"/>男
+                 <input type="radio" name="sex" value="0"/>女
+            <br/>
+            <hr />
+            1. C语言编程基础如何？:
+            <br/>
+                <input type="radio" name="basis" value="1" checked="checked"/> 优秀(程序设计基础成绩>80)
+                <br/><input type="radio" name="basis" value="2" /> 良好(程序设计基础成绩在60分到80分之间)
+                <br/><input type="radio" name="basis" value="3" /> 较一般(程序设计基础成绩低于60)
+                <br/><input type="radio" name="basis" value="4" /> 没学过
+                <br/><input type="radio" name="basis" value="5" /> 没上过相关课程但是自学过
+            <br/>
+            <hr />
+            2. 每一个小阶段感受到的任务难度与时间压力
+            <br/>
+            任务难度：规划、实现、调试该阶段功能所需要花费的思维上的精力和体验到的困难程度
+            <br/>
+            时间压力:完成这一阶段要求的功能所需要花费的时间与给出的截止时间相对的时间紧张程度
+            <br/>
+            （1：很简单/几乎没有压力   2：比较容易/有一点压力   3：难度适中/压力适中   4：难度较大/压力较大
+            5：非常难/压力很大） 
+            <hr />
+            PA1-1 数据在计算机内的存储<br/>
+            任务难度
+            <input type="radio" name="difficulty1_1" value="1" checked="checked"/> 1
+            <input type="radio" name="difficulty1_1" value="2" /> 2
+            <input type="radio" name="difficulty1_1" value="3" /> 3
+            <input type="radio" name="difficulty1_1" value="4" /> 4
+            <input type="radio" name="difficulty1_1" value="5" /> 5
+            <br/>
+            时间压力
+            <input type="radio" name="time_press1_1" value="1" checked="checked"/> 1
+            <input type="radio" name="time_press1_1" value="2" /> 2
+            <input type="radio" name="time_press1_1" value="3" /> 3
+            <input type="radio" name="time_press1_1" value="4" /> 4
+            <input type="radio" name="time_press1_1" value="5" /> 5
+            <hr />
+            PA1-2 整数的表示、存储和运算<br/>
+            任务难度
+            <input type="radio" name="difficulty1_2" value="1" checked="checked"/> 1
+            <input type="radio" name="difficulty1_2" value="2" /> 2
+            <input type="radio" name="difficulty1_2" value="3" /> 3
+            <input type="radio" name="difficulty1_2" value="4" /> 4
+            <input type="radio" name="difficulty1_2" value="5" /> 5
+            <br/>
+            时间压力
+            <input type="radio" name="time_press1_2" value="1" checked="checked"/> 1
+            <input type="radio" name="time_press1_2" value="2" /> 2
+            <input type="radio" name="time_press1_2" value="3" /> 3
+            <input type="radio" name="time_press1_2" value="4" /> 4
+            <input type="radio" name="time_press1_2" value="5" /> 5
+            <hr />
+            PA1-3 浮点数的表示和运算<br/>
+            任务难度
+            <input type="radio" name="difficulty1_3" value="1" checked="checked"/> 1
+            <input type="radio" name="difficulty1_3" value="2" /> 2
+            <input type="radio" name="difficulty1_3" value="3" /> 3
+            <input type="radio" name="difficulty1_3" value="4" /> 4
+            <input type="radio" name="difficulty1_3" value="5" /> 5
+            <br/>
+            时间压力
+            <input type="radio" name="time_press1_3" value="1" checked="checked"/> 1
+            <input type="radio" name="time_press1_3" value="2" /> 2
+            <input type="radio" name="time_press1_3" value="3" /> 3
+            <input type="radio" name="time_press1_3" value="4" /> 4
+            <input type="radio" name="time_press1_3" value="5" /> 5
+            <hr />
+            PA2-1 指令的解码与执行<br/>
+            任务难度
+            <input type="radio" name="difficulty2_1" value="1" checked="checked"/> 1
+            <input type="radio" name="difficulty2_1" value="2" /> 2
+            <input type="radio" name="difficulty2_1" value="3" /> 3
+            <input type="radio" name="difficulty2_1" value="4" /> 4
+            <input type="radio" name="difficulty2_1" value="5" /> 5
+            <br/>
+            时间压力
+            <input type="radio" name="time_press2_1" value="1" checked="checked"/> 1
+            <input type="radio" name="time_press2_1" value="2" /> 2
+            <input type="radio" name="time_press2_1" value="3" /> 3
+            <input type="radio" name="time_press2_1" value="4" /> 4
+            <input type="radio" name="time_press2_1" value="5" /> 5
+            <hr />
+
+            PA2-2 装载程序的loader<br/>
+            任务难度
+            <input type="radio" name="difficulty2_2" value="1" checked="checked"/> 1
+            <input type="radio" name="difficulty2_2" value="2" /> 2
+            <input type="radio" name="difficulty2_2" value="3" /> 3
+            <input type="radio" name="difficulty2_2" value="4" /> 4
+            <input type="radio" name="difficulty2_2" value="5" /> 5
+            <br/>
+            时间压力
+            <input type="radio" name="time_press2_2" value="1" checked="checked"/> 1
+            <input type="radio" name="time_press2_2" value="2" /> 2
+            <input type="radio" name="time_press2_2" value="3" /> 3
+            <input type="radio" name="time_press2_2" value="4" /> 4
+            <input type="radio" name="time_press2_2" value="5" /> 5
+            <hr />
+
+            PA2-3 可选任务：完善调试器<br/>
+            任务难度
+            <input type="radio" name="difficulty2_3" value="1" checked="checked"/> 1
+            <input type="radio" name="difficulty2_3" value="2" /> 2
+            <input type="radio" name="difficulty2_3" value="3" /> 3
+            <input type="radio" name="difficulty2_3" value="4" /> 4
+            <input type="radio" name="difficulty2_3" value="5" /> 5
+            <br/>
+            时间压力
+            <input type="radio" name="time_press2_3" value="1" checked="checked"/> 1
+            <input type="radio" name="time_press2_3" value="2" /> 2
+            <input type="radio" name="time_press2_3" value="3" /> 3
+            <input type="radio" name="time_press2_3" value="4" /> 4
+            <input type="radio" name="time_press2_3" value="5" /> 5
+            <hr />
+
+            PA3-1 Cache的模拟<br/>
+            任务难度
+            <input type="radio" name="difficulty3_1" value="1" checked="checked"/> 1
+            <input type="radio" name="difficulty3_1" value="2" /> 2
+            <input type="radio" name="difficulty3_1" value="3" /> 3
+            <input type="radio" name="difficulty3_1" value="4" /> 4
+            <input type="radio" name="difficulty3_1" value="5" /> 5
+            <br/>
+            时间压力
+            <input type="radio" name="time_press3_1" value="1" checked="checked"/> 1
+            <input type="radio" name="time_press3_1" value="2" /> 2
+            <input type="radio" name="time_press3_1" value="3" /> 3
+            <input type="radio" name="time_press3_1" value="4" /> 4
+            <input type="radio" name="time_press3_1" value="5" /> 5
+            <hr />
+        </font>
+        <input type = "submit" class="button" value="提交" />
+        </form>
+    </ul>
+       
+    </body>
+</html>
+
+

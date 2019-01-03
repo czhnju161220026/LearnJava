@@ -7,16 +7,31 @@ import org.springframework.web.bind.annotation.*;
 * Hello SpringBoot
 * */
 
+@Controller
+@EnableAutoConfiguration
+class MyController {
+    @GetMapping("/")
+    public String home() {
+        return "question";
+    }
+
+    @GetMapping("/questionnaire")
+    public String question() {
+        return "question";
+    }
+
+    @GetMapping("/submit_question")
+    public String submit() {
+        //TODO: 提取问卷信息
+        return "submitQuestion";
+    }
+}
+
 @RestController
 @EnableAutoConfiguration
 public class App {
-    @RequestMapping("/")
-    String home() {
-        return "Hello SpringBoot!";
-    }
-
     public static void main(String[] args) {
-        SpringApplication.run(App.class,args);
+        SpringApplication.run(MyController.class,args);
     }
 }
 
