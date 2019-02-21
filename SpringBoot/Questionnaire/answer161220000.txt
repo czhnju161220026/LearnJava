@@ -1,0 +1,13 @@
+161220000
+male
+basis: 1
+difficulty3-2: 1
+difficulty3-3: 1
+difficulty4-1: 1
+difficulty4-2: 1
+difficulty4-3: 1
+time_press3-2: 1
+time_press3-3: 1
+time_press4-1: 1
+time_press4-2: 1
+time_press4-3: 1

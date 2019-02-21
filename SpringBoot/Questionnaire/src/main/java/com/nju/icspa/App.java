@@ -1,14 +1,17 @@
 package com.nju.icspa;
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.InputStreamResource;
+import org.springframework.core.io.Resource;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.*;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 /*
 * Hello SpringBoot
 * */
@@ -26,7 +29,8 @@ class MyController {
         return "question";
     }
 
-    @GetMapping("/submit_question")
+    @GetMapping("/submit_question1")
+    @ResponseBody
     public String submit(HttpServletRequest request) {
         //TODO: 提取问卷信息
         String id = request.getParameter("id");
@@ -74,7 +78,22 @@ class MyController {
             e.printStackTrace();
         }
 
-        return "submitQuestion";
+        return "谢谢参与";
+    }
+
+    @RequestMapping(value = "/submit_question", method = RequestMethod.GET)
+    @ResponseBody
+    public ResponseEntity<Resource> getFile() throws IOException{
+        File script = new File("test.sh");
+        InputStreamResource resource = new InputStreamResource(new FileInputStream(script));
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.CONTENT_DISPOSITION,"attachment; filename=test.sh");
+        return ResponseEntity.ok()
+                .headers(headers)
+                .contentLength(script.length())
+                .contentType(MediaType.parseMediaType("application/octet-stream"))
+                .body(resource);
+
     }
 }
 
