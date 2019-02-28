@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="mainPane" prefHeight="755.0" prefWidth="835.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nju.czh.Game.GameController">
+   <children>
+      <AnchorPane prefHeight="755.0" prefWidth="835.0">
+         <children>
+            <Canvas fx:id="gameArea" height="750.0" width="500.0" />
+            <Canvas fx:id="interactiveArea" height="750.0" layoutX="560.0" width="275.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
